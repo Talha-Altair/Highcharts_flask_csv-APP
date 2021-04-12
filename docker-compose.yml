@@ -1,0 +1,9 @@
+tcharts_ca_wildfires:
+    build: .
+    # environment:
+    #   WORKER_SMTP_PORT: 265
+    command: python app.py
+    volumes:
+      - .:/home/talha/tact/Highcharts_flask_csv-APP
+    ports:
+      - "7500:7500"
