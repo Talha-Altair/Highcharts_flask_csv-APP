@@ -3,7 +3,6 @@ Source:
 
 Author: Altair
 
-
 '''
 from flask import Flask,render_template, jsonify, request
 import random
@@ -66,4 +65,4 @@ def api_add_data():
 
 
 if __name__ == "__main__":
-    app.run(debug = True,port = 7500 )
+    app.run(debug = True, host='0.0.0.0')

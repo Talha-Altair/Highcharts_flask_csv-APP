@@ -1,16 +1,16 @@
 # Use the LTS release.
-FROM python:3.7-slim-stretch
+FROM python:3.9.4-slim-buster
 
 # RUN useradd --user-group --create-home --shell /bin/false app 
-  
-ENV HOME=/home/app
 
-WORKDIR $/home/talha/tact/Highcharts_flask_csv-APP
+WORKDIR /home/tact/Highcharts_flask_csv-APP
 
-ADD requirements.txt $/home/talha/tact/Highcharts_flask_csv-APP
+ADD . .
 
-ADD app.py $/home/talha/tact/Highcharts_flask_csv-APP
+#ADD app.py .
 
-RUN pip install -r requirements.txt
+RUN pip install -r req.txt
+
+#CMD ["python3":"toy.py"]
 
 # USER app
